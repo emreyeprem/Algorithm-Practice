@@ -197,4 +197,23 @@ def isPrime(n):
 
     return True
 
-print(isPrime(number))      
+print(isPrime(number))
+
+// -------------- code bat -------------------------
+// Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+notString("candy") → "not candy"
+notString("x") → "not x"
+notString("not bad") → "not bad"
+
+public String notString(String str) {
+
+}
+function String(string){
+  let arr = string.split(' ')
+  if(arr[0]=='not'){
+    return string;
+  } else {
+    return 'not ' + string;
+  }
+}
