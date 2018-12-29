@@ -294,3 +294,91 @@ const totalJediScore = personnel
   .filter(person => person.isForceUser)
   .map(jedi => jedi.pilotingScore + jedi.shootingScore)
   .reduce((acc, score) => acc + score, 0);
+
+
+//------Equal sum of each side of an index--
+let array = [1,2,3,4,3,2,1] //Outcome: 3.index and number is 4.
+let result1;
+function findEvenIndex(array){
+  for(var i=0;i<array.length;i++){
+    let leftarray = array.slice(0,i)
+    let rigtharray = array.slice(i+1)
+    let leftSum= leftarray.reduce((a,b)=> a+b,0)
+    let rigthSum= rigtharray.reduce((a,b)=> a+b,0)
+    if(leftSum==rigthSum){
+       result1 = i
+    }
+  }
+  return result1
+}
+findEvenIndex(array)
+//---Remove smallest number in an array, get smallest index if there are more than 1-----
+let arry = [6,2,3,2,4,5]
+
+let min = Math.min(...arry)
+let index=[1]
+
+for(var i = 0; i<arry.length;i++){
+  if(arry[i]==min && index.length==0){
+    index.push(arry.indexOf(arry[i]))
+  }
+}
+let newArry = arry.slice(0,index[0]).concat(arry.slice(index[0]+1))
+console.log(newArry)
+//-----------------------------Palindrome----------------------------
+let string = "emre"
+function isPalindrome(string){
+let stringarr = string.toLowerCase().split('')
+let reversedstringarr = stringarr.reverse()
+let reversedstring=reversedstringarr.join('')
+if(string == reversedstring){
+  return true
+} else{
+  return false
+}
+}
+console.log(isPalindrome(string))
+//--------------------------------FizzBuzz---------------------------
+function isFizzBuzz(number){
+  if(number % 15 ==0){
+    return 'fizzbuzz'
+  }else if(number % 5 ==0){
+    return 'fizz'
+  } else if(number % 3 == 0){
+    return 'buzz'
+  } else {
+    return 'neither'
+  }
+
+}
+console.log(isFizzBuzz(32))
+//-------------------------------------------------------
+
+function orderString(string){
+  let orderedarr = []
+  let arr = string.split(' ')
+  console.log(arr)
+  for(var i = 1;i<10;i++){
+    arr.forEach(function(each){
+        if(each.includes(i)){
+           orderedarr.push(each)
+        }
+    })
+  }
+  console.log(orderedarr.join(' '))
+   return orderedarr.join(' ')
+}
+orderString("4of Fo1r pe6ople g3ood th5e the2")
+//------------------------------------------------
+let friends = ["Ryan", ,"Mark","Jimmy", "123", "4", "Cool Man"]
+function pickMyFriends(arr){
+  let filteredarr= arr.filter((each)=>{
+     if(each.length==4 && isNaN(each)==true){
+       return each
+     }
+
+  })
+  console.log(filteredarr)
+  return filteredarr
+}
+pickMyFriends(friends)
