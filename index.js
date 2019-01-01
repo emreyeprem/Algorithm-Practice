@@ -400,3 +400,45 @@ public String missingChar(String str, int n) {
 
   return front + back;
 }
+
+// -----------no one like this --------------------
+//  example tests
+ // should return correct text
+// Test Passed: Value == 'no one likes this'
+// Test Passed: Value == 'Peter likes this'
+// Test Passed: Value == 'Jacob and Alex like this'
+// Test Passed: Value == 'Max, John and Mark like this'
+// Test Passed: Value == 'Alex, Jacob and 2 others like this'
+
+function likes(names) {
+
+  if(names==""){
+  return 'no one likes this'
+  } else if(names.length == 1){
+  return names[0] + ' likes this'
+  } else if(names.length == 2){
+   for(var i=0; i<names.length; i++){
+    return names[i] + ' and ' + names[i+1] + ' like this'
+   }
+  } else if(names.length == 3){
+   for(var i=0; i<names.length; i++){
+    return names[i]  +', '+  names[i+1] + ' and ' + names[i+2] + ' like this'
+  }
+ } else if(names.length >= 4){
+   for(var i=0; i<names.length; i++){
+     return names[i]  +', '+  names[i+1] + ' and ' +  names.slice(2).length  + ' others like this'
+   }
+ }
+}
+
+// ---------- write digits of a large number in descending order ---------
+//Test.assertEquals(descendingOrder(0), 0)
+//Test.assertEquals(descendingOrder(1), 1)
+//Test.assertEquals(descendingOrder(123456789), 987654321)
+function descendingOrder(n){
+let arr = n.toString().split('')
+  let newarr=arr.map((each)=>{return parseInt(each)})
+  let sorted= newarr.sort((a,b)=>b-a)
+  let result=sorted.join('')
+  return parseInt(result)
+}
