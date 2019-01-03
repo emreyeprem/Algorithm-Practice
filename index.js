@@ -442,3 +442,23 @@ let arr = n.toString().split('')
   let result=sorted.join('')
   return parseInt(result)
 }
+
+// -------------- lowest & highest numbers -------------
+let numbers = "4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"
+
+
+function highAndLow(numbers){
+  let arr = numbers.split(' ')
+  console.log(arr)
+  let sorted = arr.sort((a,b)=>a-b)
+  // console.log(sorted)
+  let lowestNumber = sorted[0]
+  console.log(lowestNumber)
+
+  let sortedDescending = arr.sort((a,b)=>b-a)
+  let highestNumber = sortedDescending[0]
+  console.log(highestNumber)
+}
+highAndLow(numbers)
+
+// ------------------     ----------------------
