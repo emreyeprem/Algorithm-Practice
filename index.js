@@ -645,8 +645,24 @@ boolean doubleX(String str) {
   // Is char at i+1 also an "x"?
   if (i+1 >= str.length()) return false; // check i+1 in bounds?
   return str.substring(i+1, i+2).equals("x");
-  
+
   // Another approach -- .startsWith() simplifies the logic
   // String x = str.substring(i);
   // return x.startsWith("xx");
+}
+
+// Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
+
+// stringBits("Hello") → "Hlo"
+// stringBits("Hi") → "H"
+// stringBits("Heeololeo") → "Hello"
+
+public String stringBits(String str) {
+  String result = "";
+  // Note: the loop increments i by 2
+  for (int i=0; i<str.length(); i+=2) {
+    result = result + str.substring(i, i+1);
+    // Alternately could use str.charAt(i)
+  }
+  return result;
 }
