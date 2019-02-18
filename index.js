@@ -880,4 +880,15 @@ function primeFactors(n){
 
 }
 console.log(primeFactors(69))
-// -----------------------------------------------------
+// ------------------- FIBONACCI NUMBERS ---------------------
+//How do get nth Fibonacci number?
+function fibonacci(n){
+  if(n <= 1){
+    return n;
+  }else{
+    return fibonacci(n-1) + fibonacci(n-2)
+  }
+}
+console.log(fibonacci(12))  //144
+// -------------------------------------------------
+
