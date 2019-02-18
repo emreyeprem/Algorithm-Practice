@@ -824,3 +824,24 @@ function XO(str) {
   return (x && x.length) === (o && o.length);
 }
 console.log(XO('oxotoxcian'))
+
+// function XO(str) {
+//   var a = str.replace(/x/gi, ''),
+//       b = str.replace(/o/gi, '');
+//   return a.length === b.length;
+// }
+
+// -----------------------------------------------
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+// 1st way;
+function friends(str){
+  if(str.length===4){
+    return true
+  } else{
+    false
+  }
+}
+console.log(friends('Zero'))
