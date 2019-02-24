@@ -942,10 +942,13 @@ console.log(timeValue);
 
 //------------ slice() --------------
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var pets = ["bird", "cat", "dog", "squarrel"]
 document.getElementById("demo").innerHTML = fruits;
 
 function myFunction() {
-  fruits.splice(2, 0, "Lemon", "Kiwi");
+  fruits.splice(2, 0, "Lemon", "Kiwi");   // first output
+  pets.splice(1,3)                       //  second output
   document.getElementById("demo").innerHTML = fruits;
 }
 console.log(myFunction(fruits))   //Banana,Orange,Lemon,Kiwi,Apple,Mango
+console.log(myFunction(pets))   // bird
