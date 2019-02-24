@@ -952,3 +952,16 @@ function myFunction() {
 }
 console.log(myFunction(fruits))   //Banana,Orange,Lemon,Kiwi,Apple,Mango
 console.log(myFunction(pets))   // bird
+
+// ------------ Reverse an array ------------
+function reverse(array){
+  var output = [],
+      i;
+  for (i = 0; i < array.length; i++){
+    output.unshift(array[i]);
+  }
+  return output;
+}
+console.log(reverse([1,2,3,4,5,6,7]));
+
+// ------------ 
