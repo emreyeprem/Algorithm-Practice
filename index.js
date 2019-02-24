@@ -939,3 +939,13 @@ timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
 // show
 alert(timeValue);
 console.log(timeValue);
+
+//------------ slice() --------------
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits.splice(2, 0, "Lemon", "Kiwi");
+  document.getElementById("demo").innerHTML = fruits;
+}
+console.log(myFunction(fruits))   //Banana,Orange,Lemon,Kiwi,Apple,Mango
