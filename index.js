@@ -956,7 +956,7 @@ console.log(myFunction(pets))   // bird
 // ------------ Reverse an array ------------
 function reverse(array){
   var output = [],
-      i;
+     var i;
   for (i = 0; i < array.length; i++){
     output.unshift(array[i]);
   }
