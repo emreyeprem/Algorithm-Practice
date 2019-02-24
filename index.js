@@ -964,4 +964,15 @@ function reverse(array){
 }
 console.log(reverse([1,2,3,4,5,6,7]));
 
-// ------------ 
+//------Reversing an array without 'reverse' or duplicating an array--------
+
+function reverse(arr) {
+  for(let i = 0, j = arr.length-1; i < j; i++, j--)
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+
+const arr = ['a','b','c','d','e'];
+reverse(arr);
+console.log(arr);
+
+// -----------------------------
