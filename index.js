@@ -975,4 +975,13 @@ const arr = ['a','b','c','d','e'];
 reverse(arr);
 console.log(arr);
 
-// -----------------------------
+// ------------ Linear-Time Algorithm (Big 0 Algorithm) --------------------
+
+const findIndex = (items, match) => {
+  for (let i = 0, total = items.length; i < total; i++)
+    if (items[i] == match)
+      return i;
+   return -1;
+};
+const array= ['a', 'b', 'c', 'd'];
+console.log(findIndex(array, 'c'))
