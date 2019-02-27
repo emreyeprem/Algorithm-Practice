@@ -880,6 +880,7 @@ function primeFactors(n){
 
 }
 console.log(primeFactors(69))
+
 // ------------------- FIBONACCI NUMBERS ---------------------
 //How do get nth Fibonacci number?
 function fibonacci(n){
@@ -910,7 +911,6 @@ function greatestCommonDivisor(a, b){
 console.log(greatestCommonDivisor(69, 169))
 
 // -------- Convert military time to standard time in javascript ------
-
 
 var time = "16:30:00"; // your input
 
@@ -985,3 +985,4 @@ const findIndex = (items, match) => {
 };
 const array= ['a', 'b', 'c', 'd'];
 console.log(findIndex(array, 'c'))
+console.log(findIndex(array, 'a'))
