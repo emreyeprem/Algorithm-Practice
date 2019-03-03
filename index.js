@@ -1010,3 +1010,16 @@ const findIndex = (items, match) => {
 const array= ['a', 'b', 'c', 'd'];
 console.log(findIndex(array, 'c'))
 console.log(findIndex(array, 'a'))
+
+// --------- REMOVE First Duplicate from Array -------
+function duplicateNumber(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) !== i) {
+      return arr[i];
+    }
+  }
+  return null;
+}
+
+console.log(duplicateNumber([3, 5, 6, 8, 5, 3]));
+// ---------------------------------
