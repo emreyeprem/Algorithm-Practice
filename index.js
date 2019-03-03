@@ -1036,4 +1036,16 @@ function duplicateNumber(arr) {
 
 var arr = [3, 5, 6, 8, 5, 3];
 console.log(duplicateNumber(arr));
-// ----------------------------------
+// ------------ ************* ------------
+function duplicateNumber(arr){
+  var nonDuplicate = [];
+  for(var i=0; i<arr.length; i++){
+    if(nonDuplicate.includes(arr[i]) === false){
+      nonDuplicate.push(arr[i])
+    }else{
+      return arr[i]
+    }
+  }
+}
+var arr = [3, 5, 6, 6, 8, 5, 3];
+console.log(duplicateNumber(arr)); // 6
