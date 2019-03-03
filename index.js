@@ -939,6 +939,30 @@ timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
 // show
 alert(timeValue);
 console.log(timeValue);
+// ---------------------------------
+
+let time = "16:30:00"
+time = time.split(':')
+let hour = Number(time[0]);
+let minute = Number(time[1]);
+let second = Number(time[2]);
+
+let timeValue;
+
+if(hour>0 && hour<=12){
+   timeValue = '' + hour
+}else if(hour>12 && hour<=24){
+   timeValue = '' + (hour - 12)
+}else if(hour = 0){
+   timeValue = '' + 12
+}
+
+timeValue += (minute<10) ? ":0" + minute : ":" + minute;
+timeValue += (second<10) ? ":0" + second : ":" + second;
+timeValue += (hour>=12) ? "PM" : "AM";
+
+alert(timeValue)
+console.log(timeValue)
 
 //------------ slice() --------------
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
