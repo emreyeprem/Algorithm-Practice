@@ -999,10 +999,17 @@ function myFunction() {
 console.log(myFunction(fruits))   //Banana,Orange,Lemon,Kiwi,Apple,Mango
 console.log(myFunction(pets))   // bird
 
+// ------------ Reduce Function --------------
+function getSum(num, sum){
+  return num + sum
+}
+let arr = [12, 15, 20, 30]
+console.log(arr.reduce(getSum))   // 77
+
 // ------------ Reverse an array ------------
 function reverse(array){
   var output = [],
-     var i;
+     i;
   for (i = 0; i < array.length; i++){
     output.unshift(array[i]);
   }
