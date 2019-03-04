@@ -1071,3 +1071,26 @@ function duplicateNumber(arr){
 }
 var arr = [3, 5, 6, 6, 8, 5, 3];
 console.log(duplicateNumber(arr)); // 6
+
+// --Given n people, find total number of pairs can be formed----
+
+function uniquePairs(n){
+  return n*(n-1)/2
+}
+console.log(uniquePairs(8))   // 28
+// --------------- Sort array --------------
+
+var points = [40, 100, 1, 5, 25, 10];
+
+function sortArray(arr) {
+   return arr.sort(function(a, b){return a-b});
+}
+console.log(sortArray(points))     // [1, 5, 10, 25, 40, 100]
+// ------------- ************ --------------
+
+var points = [40, 100, 1, 5, 25, 10];
+
+function sortArray(arr) {
+   return arr.sort(function(a, b){return b-a});
+}
+console.log(sortArray(points))   // [100, 40, 25, 10, 5, 1]
