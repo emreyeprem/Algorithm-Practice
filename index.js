@@ -1101,3 +1101,44 @@ function sortArray(arr) {
    return arr.sort(function(a, b){return b-a});
 }
 console.log(sortArray(points))   // [100, 40, 25, 10, 5, 1]
+
+// ----------- Interview Accent ----------
+
+function areaCircle(r){
+  return 3.1*r*r
+  }
+  
+  var array = [3, 18, 95, 4, 7]
+  
+  sorter(array) -> [-7, 3, 4, ...]
+  
+  function sortedArray(arr){
+  var newArray = []
+  for(var i = 0; i<arr.length; i++){
+  for(var j = 0; j<arr.length; i++){
+   if(arr[i] > arr[j+1]{
+     newArray.unshift(arr[j])
+   }
+   }
+  }
+  console.log(newArray)
+  }
+  sortedArray(arr)
+  
+  lowest = 999999999999
+  indexOfLowest = 999999999
+  
+  for... {
+  for (i = 0; i < arr.length; i++) {
+    if arr[i] < lowest {
+      lowest = arr[i]
+      indexOfLowest = 1
+    }
+  } 
+  newArray.push(lowest)
+  array[i] - null;
+  }
+  
+  lowest -> -7
+  indexOfLowest -> 2
+  // ------------------------------------
