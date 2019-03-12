@@ -1141,4 +1141,22 @@ function areaCircle(r){
   
   lowest -> -7
   indexOfLowest -> 2
-  // ------------------------------------
+  // --------***-------- Python 3 -------****----------
+  // List overlap solutions  ( common elements of arrays )
+ 
+  import random
+
+  # a = range(1, random.randint(1,30))
+  # b = range(1, random.randint(10,40))
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  
+  new_list = []
+  
+  for num in a:
+      if num in b:
+          new_list.append(num)
+  
+  print(new_list)
+
+  // --------------------------
