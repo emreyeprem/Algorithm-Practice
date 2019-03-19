@@ -1308,4 +1308,8 @@ function noOdds(arr) {
   return result;
 }
 
-// 
+// ---------- VALID ZIP CODE ---------
+function isValid(zip) {
+	if(zip.toString().length == 5 && zip - zip == 0){return true}
+	return false
+}
