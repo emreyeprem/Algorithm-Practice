@@ -1276,4 +1276,36 @@ function firstLast(arr) {
 	}
 }
 
-// ------------------------
+// ----Check if String Ending Matches Second String-----
+
+function checkEnding(str1, str2) {
+  return str1.endsWith(str2);
+}
+
+// -------RETURN THE FOUR LETTER STRINGS---------
+function isFourLetters(arr) {
+  var result = [];
+  for(var i=0; i < arr.length; i++){
+    if (arr[i].length == 4){
+      result.push(arr[i]);
+    }
+	}
+  return result;
+}
+
+// ------- Eliminate Odd Numbers within an Array -------
+function noOdds(arr) {
+  return arr.filter(x => x % 2 === 0);
+}
+// ALTERNATIVE BELOW
+  function noOdds(arr) {
+  var result = [];
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i]%2 == 0) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+// 
