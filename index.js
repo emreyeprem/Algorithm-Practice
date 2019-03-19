@@ -1248,4 +1248,21 @@ sort(list):
          append(negative,first)
   return concatenate(negative,positive)
 
-  // *****************************
+  // *************** PALLINDROM **************
+
+  function checkPalindrome(str) {
+    for (i = 0; i < str.length; i++) {
+      if (str[i] === str[str.length - i - 1]) {
+        return true
+      }
+      else {
+        return false
+      }
+    }
+  }
+  // *************** PALLINDROM 2 **************
+  function checkPalindrome(str) {
+    return str === str.split("").reverse().join("");
+  }
+
+  // ************
