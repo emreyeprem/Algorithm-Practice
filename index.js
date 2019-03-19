@@ -1195,4 +1195,57 @@ function areaCircle(r){
   > mergeSortedArray([2,5,6,9], [1,2,3,29]);
    = [1, 2, 2, 3, 5, 6, 9, 29]
 
-  //  ****************************
+  //  ********* Finding the second smallest integer in array *******
+
+  int[] elements = {-5, -4, 0, 2, 10, 3, -3};
+    int smallest = Integer.MAX_VALUE;
+    int secondSmallest = Integer.MAX_VALUE;
+    for (int i = 0; i < elements.length; i++) {
+        if(elements[i]==smallest){
+          secondSmallest=smallest;
+        } else if (elements[i] < smallest) {
+            secondSmallest = smallest;
+            smallest = elements[i];
+        } else if (elements[i] < secondSmallest) {
+            secondSmallest = elements[i];
+        }
+    }
+
+    // *********** FIRST NON-REPEATING INTEGERS OF ARRAY ************
+
+    int[] elements = { 1, 1, 2, 3, 3, 4 };
+Set<Integer> singleSet = new HashSet<>();
+Set<Integer> repeatedSet = new HashSet<>();
+
+for (int e : elements) {
+    if (repeatedSet.contains(e)) {
+        continue;
+    }
+    if (singleSet.contains(e)) {
+        singleSet.remove(e);
+        repeatedSet.add(e);
+    } else {
+        singleSet.add(e);
+    }
+}
+
+for (int e : elements) {
+    if (singleSet.contains(e)) {
+        return e;
+    }
+}
+
+// *********** REARRANGE NEGATIVE AND POSITIVE NUMBERS IN ARRAY ******
+
+sort(list):
+  negative = empty
+  positive = empty
+  while (list != empty)
+     first = pop(list)
+     if (first > 0) 
+         append(positive,first)
+     else
+         append(negative,first)
+  return concatenate(negative,positive)
+
+  // *****************************
