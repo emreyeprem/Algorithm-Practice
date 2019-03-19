@@ -1265,4 +1265,15 @@ sort(list):
     return str === str.split("").reverse().join("");
   }
 
-  // ************
+  // ******** RETURN THE FIRST & LAST ELEMENTS IN ARRAY ****
+  firstLastArr = [5, 10, 15, 20, 25]
+function firstLast(arr) {
+	let array = []
+	for(var i = 0; i<arr.length; i++){
+		array.unshift(arr[0])
+		array.push(arr[arr.length-1])
+		return array;
+	}
+}
+
+// ------------------------
