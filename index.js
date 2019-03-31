@@ -677,12 +677,12 @@ public String stringBits(String str) {
 public int sumDouble(int a, int b) {
   // Store the sum in a local variable
   int sum = a + b;
-  
+
   // Double it if a and b are the same
   if (a == b) {
     sum = sum * 2;
   }
-  
+
   return sum;
 }
 
@@ -729,7 +729,7 @@ public String frontTimes(String str, int n) {
     frontLen = str.length();
   }
   String front = str.substring(0, frontLen);
-  
+
   String result = "";
   for (int i=0; i<n; i++) {
     result = result + front;
@@ -737,7 +737,7 @@ public String frontTimes(String str, int n) {
   return result;
 }
 
-//Exercise 
+//Exercise
 //I want this code to log out “hey amy”, but it logs out “hey arnold” - why?
 function greet (person) {
   if (person == { name: 'amy' }) {
@@ -893,16 +893,16 @@ function fibonacci(n){
 console.log(fibonacci(12))  //144
 // ------------------- Greatest Common Divisor -------------------
 function greatestCommonDivisor(a, b){
-  var divisor = 2, 
+  var divisor = 2,
       greatestDivisor = 1;
 
   //if u pass a -ve number this will not work. fix it dude!!
   if (a < 2 || b < 2)
      return 1;
-  
+
   while(a >= divisor && b >= divisor){
    if(a %divisor == 0 && b% divisor ==0){
-      greatestDivisor = divisor;      
+      greatestDivisor = divisor;
     }
    divisor++;
   }
@@ -913,18 +913,18 @@ console.log(greatestCommonDivisor(69, 169))
 // ------- Convert standard time (12) to military time(24)-----
 function timeConvertor(time) {
   var PM = time.match('PM') ? true : false
-  
+
   time = time.split(':')
   var min = time[1]
-  
+
   if (PM) {
       var hour = 12 + parseInt(time[0],10)
       var sec = time[2].replace('PM', '')
   } else {
       var hour = time[0]
-      var sec = time[2].replace('AM', '')       
+      var sec = time[2].replace('AM', '')
   }
-  
+
   console.log(hour + ':' + min + ':' + sec)
 }
 
@@ -953,7 +953,7 @@ if (hours > 0 && hours <= 12) {
 } else if (hours == 0) {
   timeValue= "12";
 }
- 
+
 timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
 timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
 timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
@@ -1107,11 +1107,11 @@ console.log(sortArray(points))   // [100, 40, 25, 10, 5, 1]
 function areaCircle(r){
   return 3.1*r*r
   }
-  
+
   var array = [3, 18, 95, 4, 7]
-  
+
   sorter(array) -> [-7, 3, 4, ...]
-  
+
   function sortedArray(arr){
   var newArray = []
   for(var i = 0; i<arr.length; i++){
@@ -1124,66 +1124,66 @@ function areaCircle(r){
   console.log(newArray)
   }
   sortedArray(arr)
-  
+
   lowest = 999999999999
   indexOfLowest = 999999999
-  
+
   for... {
   for (i = 0; i < arr.length; i++) {
     if arr[i] < lowest {
       lowest = arr[i]
       indexOfLowest = 1
     }
-  } 
+  }
   newArray.push(lowest)
   array[i] - null;
   }
-  
+
   lowest -> -7
   indexOfLowest -> 2
   // --------***-------- Python 3 -------****----------
   // List overlap solutions  ( common elements of arrays )
- 
+
   import random
 
   # a = range(1, random.randint(1,30))
   # b = range(1, random.randint(10,40))
   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
   b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-  
+
   new_list = []
-  
+
   for num in a:
       if num in b:
           new_list.append(num)
-  
+
   print(new_list)
 
   // ---------- MERGE TWO SORTED ARRAY ----------
 
   function mergeSortedArray(a, b){
-    var merged = [], 
+    var merged = [],
         aElm = a[0],
         bElm = b[0],
         i = 1,
         j = 1;
-    
+
     if(a.length ==0)
       return b;
     if(b.length ==0)
       return a;
-    /* 
+    /*
     if aElm or bElm exists we will insert to merged array
     (will go inside while loop)
      to insert: aElm exists and bElm doesn't exists
                or both exists and aElm < bElm
-      this is the critical part of the example            
+      this is the critical part of the example
     */
     while(aElm || bElm){
      if((aElm && !bElm) || aElm < bElm){
        merged.push(aElm);
        aElm = a[i++];
-     }   
+     }
      else {
        merged.push(bElm);
        bElm = b[j++];
@@ -1191,7 +1191,7 @@ function areaCircle(r){
     }
     return merged;
   }
-  
+
   > mergeSortedArray([2,5,6,9], [1,2,3,29]);
    = [1, 2, 2, 3, 5, 6, 9, 29]
 
@@ -1242,7 +1242,7 @@ sort(list):
   positive = empty
   while (list != empty)
      first = pop(list)
-     if (first > 0) 
+     if (first > 0)
          append(positive,first)
      else
          append(negative,first)
@@ -1325,12 +1325,12 @@ function reverse(str){
 
 > reverse('you are a nice dude');
   = "edud ecin a era uoy"
-  
+
   //*********** First Non Repeating character in a string *********
 
   function firstNonRepeatChar(str){
     var len = str.length,
-        char, 
+        char,
         charCount = {};
     for(var i =0; i<len; i++){
       char = str[i];
@@ -1344,8 +1344,8 @@ function reverse(str){
       if (charCount[j]==1)
          return j;
     }
-  }  
-  
+  }
+
   >firstNonRepeatChar('the quick brown fox jumps then quickly blow air');
    = "f"
 
@@ -1353,8 +1353,8 @@ function reverse(str){
 
   function removeDuplicateChar(str){
     var len = str.length,
-        char, 
-        charCount = {}, 
+        char,
+        charCount = {},
         newStr = [];
     for(var i =0; i<len; i++){
       char = str[i];
@@ -1370,8 +1370,12 @@ function reverse(str){
     }
     return newStr.join('');
   }
-  
+
   > removeDuplicateChar('Learn more javascript dude');
     = "Lnmojvsciptu"
 
-    // **************************
+    // ************ is Palindrome **************
+    function checkPalindrom(str) {
+    return str == str.split('').reverse().join('');
+}
+// ********************
