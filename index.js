@@ -1521,3 +1521,19 @@ var arr = str.split(''),
     }
    return perms;
 }
+
+// **************** FIND THE INDEX *****************
+
+function find_index(lst, str) {
+	for (let i = 0; i < lst.length; i++) {
+		if (lst[i] === str) {
+			return i;
+		}
+	}
+}
+// ---- OR ---
+function find_index(lst, str) {
+ return lst.indexOf(str);
+}
+
+// *******************************
