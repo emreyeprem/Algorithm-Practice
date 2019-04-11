@@ -1536,4 +1536,8 @@ function find_index(lst, str) {
  return lst.indexOf(str);
 }
 
-// *******************************
+// ************** Check if Number is within a Given Range *****************
+function isInRange(num, range) {
+	return num >= range.min && num <= range.max;
+}
+// ********
