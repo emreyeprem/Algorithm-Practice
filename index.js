@@ -1552,5 +1552,13 @@ function missingNums(arr) {
     if(arr.indexOf(i) == -1) return i
   }
 }
+//******
+function missingNums(arr) {
+  for (var i = 1; i <= 10;i++){
+    if (arr.indexOf(i) == -1){
+      return i;
+    }
+  }
+}
 
 // *************************
