@@ -1540,4 +1540,10 @@ function find_index(lst, str) {
 function isInRange(num, range) {
 	return num >= range.min && num <= range.max;
 }
-// ********
+// ******** FIND THE MISSING NUMBER *******
+const missingNums = (arr) => {
+  for (let i = 1; i <= arr.length + 1; i++) {
+    if (arr.indexOf(i) === -1) return i;
+  }
+}
+// ______________________
