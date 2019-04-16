@@ -1561,4 +1561,15 @@ function missingNums(arr) {
   }
 }
 
-// *************************
+// ********** CHECK IF TWO ARRAYS HAVE IDENTICAL ELEMENTS *********
+const checkEquals = (a, b) => a.join(",") == b.join(",")
+
+//ALTERNATIVE WAY -----
+function checkEquals(arr1, arr2) {
+	if (arr1.join() === arr2.join()) {
+  	return true
+  } else {
+  	return false
+  }
+}
+// ***************
