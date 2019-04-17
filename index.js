@@ -1572,4 +1572,10 @@ function checkEquals(arr1, arr2) {
   	return false
   }
 }
-// ***************
+// ******* CAPITALIZE THE NAMES IN ARRAY ********
+//capMe(["mavis", "senaida", "letty"])➞ ["Mavis", "Senaida", "Letty"]
+
+function capMe(arr) {
+	return arr.map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase());
+}
+// **********************
