@@ -1578,4 +1578,29 @@ function checkEquals(arr1, arr2) {
 function capMe(arr) {
 	return arr.map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase());
 }
-// **********************
+// ********* check Double Letters *************
+function doubleLetters(word) {
+	word = word.split("");
+	for (var i = 1; i < word.length; i++){
+		if(word[i-1] == word[i]){
+			return true;
+			break;
+		}
+	}
+	return false;
+}
+// **** ALTERNATIVE ****
+function doubleLetters(word) {
+
+  let count = 0;
+
+  for (let i = 0; i < word.length ; i ++){
+		if (word.includes(word[i].repeat(2))) {
+      count++;
+    }
+  }
+  return count >= 2;
+
+}
+
+// *******************
