@@ -1536,7 +1536,7 @@ function find_index(lst, str) {
  return lst.indexOf(str);
 }
 
-// ************** Check if Number is within a Given Range *****************
+// ******** Check if Number is within a Given Range ******
 function isInRange(num, range) {
 	return num >= range.min && num <= range.max;
 }
@@ -1603,4 +1603,25 @@ function doubleLetters(word) {
 
 }
 
-// *******************
+// ****** Create a function that takes a number as its argument and returns an array of all its factors. *****
+function factorize(num) {
+	let factors = []
+	for (i = 1; i <= num; i++) {
+		if (num % i === 0) {
+			factors.push(i)
+		}
+	}
+	return factors
+}
+// ALTERNATIVE WAY *****
+function factorize(num) {
+	let factors = [];
+
+	for(var i = 1; i <= num; i++) {
+		if(num % i == 0) {
+			factors.push(i)
+		}
+	}
+	return factors;
+}
+// *************
