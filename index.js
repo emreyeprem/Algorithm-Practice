@@ -1624,4 +1624,14 @@ function factorize(num) {
 	}
 	return factors;
 }
-// *************
+// ****** Reverse the Order of Words with Five Letters or More *******
+function reverse(str) {
+  return str.split(' ').map(x => x.length > 4 ? x.split('').reverse().join('') : x).join(' ');
+}
+// ALTERNATIVE *****
+function reverse(str) {
+  return str.split(' ').map(s => {
+    if (s.length >= 5) {return s.split('').reverse().join('')}
+    else {return s}
+  }).join(' ')
+}
