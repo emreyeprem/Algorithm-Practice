@@ -1635,3 +1635,19 @@ function reverse(str) {
     else {return s}
   }).join(' ')
 }
+// ***** REMOVE SPECIAL CHARACTER ****
+function removeSpecialCharacters(str) {
+  return str.replace(/[^0-9A-Za-z\_\ \-]/g,'')
+}
+// ALTERNATIVE ***
+function removeSpecialCharacters(str) {
+  var result = ''
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i].toLowerCase()
+    if ((char >= 'a' && char <= 'z') || (char >= '0' & char <= '9') ||
+         char == '-' || char == '_' || char == ' ') {
+      result += str[i]
+    }
+  }
+  return result
+// *******************
