@@ -1650,4 +1650,22 @@ function removeSpecialCharacters(str) {
     }
   }
   return result
-// *******************
+// ******** BASIC EMAIL VALIDATION ***********
+function validateEmail(str) {
+  var posAt = str.indexOf("@"),
+      posDot = str.lastIndexOf(".");
+
+  if (posAt > 0 && posDot > posAt) {
+    return true;
+  } else {
+    return false;
+  }
+}
+// ALTERNATIVE ****
+function validateEmail(str) {
+  return /.+@.+\..+/.test(str);
+}
+//ALTERNATIVE ***
+function validateEmail(str) {
+  return str.match(/\w+@\w+\.\w+/gi) ? true : false;
+}
