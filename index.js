@@ -1669,3 +1669,21 @@ function validateEmail(str) {
 function validateEmail(str) {
   return str.match(/\w+@\w+\.\w+/gi) ? true : false;
 }
+// ****** ATM PIN Code Validation ********
+function validatePIN(pin) {
+  if (pin.length == 0 || (pin.length != 4 && pin.length != 6)) return false;
+  for (i = 0; i < pin.length; i++) {
+    if (isNaN(pin[i])) return false;
+  }
+  return true
+}
+// ALTERNATIVE ****
+function validatePIN(pin) {
+  if (!parseInt(pin).isNaN){
+    if (pin.length == 4 || pin.length == 6){
+      return true;
+    }
+  }
+  return false;
+}
+// *****************
