@@ -1686,4 +1686,13 @@ function validatePIN(pin) {
   }
   return false;
 }
-// *****************
+// ********* SPLIT ITEM CODES ********
+function splitCode(item) {
+	return [item.slice(0, item.length/2), item.slice(item.length/2)/1]
+}
+//ALTERNATIVE***
+function splitCode(item) {
+	let index = item.split('').findIndex(c => !isNaN(c))
+	return [item.substring(0, index), Number(item.substring(index))]
+}
+// ****************
