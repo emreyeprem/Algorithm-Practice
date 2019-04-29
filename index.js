@@ -25,7 +25,23 @@ var result = ''
     console.log(arr.indexOf(arr[i]) + 1)
  }
  }
- //-------------------String to camelcase and combined-------------------------
+ // ============== Words that Start with a Vowel ====================
+
+ function retrieve(str) {
+ 	return str.replace(/[.]/g,'')
+ 		.toLowerCase()
+ 		.split(/\s/)
+ 		.filter(x=>/[aeiou]/.test(x.charAt(0)));
+ }
+ // ALTERNATIVE ***
+ function retrieve(str) {
+ 	if(str.length<1)
+ 		return []
+ 	return str.toLowerCase().slice(0,-1).split(" ").filter(w=> /[aeiou]/ig.test(w[0]))
+ }
+
+
+ //-------------------String to camelcase and combined--------------------
 let str = "The_stealth_warrior" //Output: TheStealthWarrior
 let capitalizedArr = []
  function toCamelCase(str){
