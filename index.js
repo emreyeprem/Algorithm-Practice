@@ -17,6 +17,7 @@ var result = ''
  } else {
   result = "even"
  }
+
  for(var i = 0; i< arr.length; i++){
    if(result == "odd" && arr[i] % 2 != 0){
     console.log(arr.indexOf(arr[i]) + 1)
@@ -135,6 +136,21 @@ console.log(capitalizedArr.join(''))
 }
 }
 toCamelCase(str)
+
+// ================== FizzBuzz ================
+function fizzBuzz(){
+	for(var i=1;i<=100;i++){
+		if(i%5 === 0 && i%3 === 0){
+			print('FizzBuzz');
+		} else if(i%3 === 0){
+			print('Fizz');
+		} else if(i%5 === 0){
+			print('Buzz');
+		} else {
+			print(i);
+		}
+	}
+}
 //-------------------Equal sum of each side of an index-----------------------------------------------------
 let array = [1,2,3,4,3,2,1] //Outcome: 3.index and number is 4.
 let result1;
