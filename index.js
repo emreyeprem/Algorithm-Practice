@@ -253,7 +253,13 @@ function String(string){
 var a1 = [1,2,3];
 var a2 = [1,2,3];
 console.log(a1==a2);    // Returns false
-console.log(JSON.stringify(a1)==JSON.stringify(a2));    // Returns true 
+console.log(JSON.stringify(a1)==JSON.stringify(a2));    // Returns true
+
+//**** Object comparison
+var obj1={test:"value"};
+var obj2={test:"value2"};
+
+console.log(JSON.stringify(obj1) == JSON.stringify(obj2))    // Returns false
 
 // -------- Combining .map(), .reduce(), and .filter() ---------
 var personnel = [
