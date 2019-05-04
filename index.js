@@ -381,6 +381,27 @@ if(string == reversedstring){
 }
 }
 console.log(isPalindrome(string))
+
+// -----------------------------------------------------------------
+// *** Create a function that takes three integer arguments (a, b, c) and returns the number of equal values.
+function equal(a, b, c) {
+	if(a==b &&a==c && b==c){
+		return 3
+	}
+	else if(a==b|| a==c){
+		return 2
+	}
+	return 0
+}
+// Alternative **
+function equal(a, b, c) {
+ if (a === b && a === c) {
+	return 3;}
+ if (a === b || a === c || b === c) {
+	return 2;}
+		return 0;
+	}
+
 //--------------------------------FizzBuzz---------------------------
 function isFizzBuzz(number){
   if(number % 15 ==0){
