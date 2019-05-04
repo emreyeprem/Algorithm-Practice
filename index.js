@@ -368,6 +368,24 @@ for(var i = 0; i<arry.length;i++){
 }
 let newArry = arry.slice(0,index[0]).concat(arry.slice(index[0]+1))
 console.log(newArry)
+
+//Alternative ***
+let arry = [6,2,3,2,4,5]
+let min = Math.min(...arry)
+
+function getMin(arry){
+	let result;
+for(let i=0; i<arry.length; i++){
+	if(arry[i] == min){
+		result = i;
+    i = arry.length
+	}
+}
+return result
+}
+console.log(getMin(arry))
+
+
 //-----------------------------Palindrome----------------------------
 let string = "emre"
 function isPalindrome(string){
