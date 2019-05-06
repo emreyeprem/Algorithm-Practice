@@ -420,6 +420,18 @@ function equal(a, b, c) {
 		return 0;
 	}
 
+  //Alternative**
+  function equal(a, b, c) {
+	let x = new Set([a, b, c]);
+	if (x.size == 3){
+		return 0;
+	} else if (x.size == 2){
+		return 2;
+	} else if (x.size == 1){
+		return 3;
+	}
+}
+
 //--------------------------------FizzBuzz---------------------------
 function isFizzBuzz(number){
   if(number % 15 ==0){
