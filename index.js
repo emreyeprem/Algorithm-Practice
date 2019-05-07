@@ -1198,11 +1198,33 @@ console.log(sortArray(points))   // [100, 40, 25, 10, 5, 1]
 
 // ----------- Interview Accent ----------
 
+var array = [3, 18, 95, 4, -7]
+  var newArray = []
+  // sorter(array) -> [-7, 3, 4, ...]
+
+  function sortedArray(arr){
+		let length = array.length
+	for(i = 0; i<length; i++){
+	let min = Math.min(...array)
+	newArray.push(min)
+	var index = array.indexOf(min);
+	if (index > -1) {
+	  array.splice(index, 1);
+	}
+}
+return newArray
+}
+console.log(sortedArray(array))
+
+
+
+//=======================================
+
 function areaCircle(r){
   return 3.1*r*r
   }
 
-  var array = [3, 18, 95, 4, 7]
+  var array = [3, 18, 95, 4, -7]
 
   sorter(array) -> [-7, 3, 4, ...]
 
