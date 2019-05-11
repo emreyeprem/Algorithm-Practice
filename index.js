@@ -613,6 +613,21 @@ public String frontTimes(String str, int n) {
   return result;
 }
 
+// ============= Number of arrays in an array =================
+
+function numOfSubbarrays(arr) {
+	return arr.filter(a => a instanceof Array).length;
+}
+//ALTERNATIVE ***
+function numOfSubbarrays(arr) {
+	var c = 0;
+	for (var i in arr) {
+		if (arr[i] instanceof Array) c++;
+	}
+	return c;
+}
+
+
 // -----------------------  altPairs ---------------------
 
 // Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
