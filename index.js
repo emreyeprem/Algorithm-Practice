@@ -638,6 +638,13 @@ function factorize(num) {
 	}
 	return factors
 }
+//ALTERNATIVE****
+const factorize = n => {
+	let f = [];
+	let i = 0;
+	while (i++ < n){n%i ? "" : f.push(i)}
+	return f;
+}
 
 
 // -----------------------  altPairs ---------------------
