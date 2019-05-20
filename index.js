@@ -112,6 +112,30 @@ for(var i = 0; i< arr.length; i++){
    console.log(arr.indexOf(arr[i]) + 1)
 }
 }
+
+// ************** FLATTEN AN ARRAY **********
+
+function flattenArray(arr) {
+  var results = [];
+  if (arr === undefined) {
+    return results;
+  }
+  arr.forEach(function (e) {
+    if (Array.isArray(e)) {
+       results = results.concat(flattenArray(e));
+    }
+    else {
+    	  if (typeof e === 'function') {
+     		 	results.push(e());
+    		}
+    	  else {
+      		results.push(e);
+    		}
+    }
+  });
+  return results;
+}
+
 //-------------------String to camelcase and combined------------------------------------
 let str = "The-stealth-warrior" //Output: TheStealthWarrior
 let capitalizedArr = []
