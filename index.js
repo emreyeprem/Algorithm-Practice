@@ -135,6 +135,29 @@ function flattenArray(arr) {
   });
   return results;
 }
+// ALTERNATIVE ***
+function flattenArray(arr) {
+  if ( ! arr || ! Array.isArray(arr) ) return [];
+  return arr.reduce(flattenItem, []);
+}
+
+function flattenItem(sum, item)	{
+  switch (typeof item) {
+    case 'object':
+      if ( Array.isArray(item) ) {
+        item.reduce(flattenItem, []).forEach(function (i) {
+          sum.push(i);
+        });
+        break;
+      }
+    case 'function':
+      sum.push(item());
+      break;
+    default:
+      sum.push(item);
+  }
+  return sum;
+}
 
 //-------------------String to camelcase and combined------------------------------------
 let str = "The-stealth-warrior" //Output: TheStealthWarrior
