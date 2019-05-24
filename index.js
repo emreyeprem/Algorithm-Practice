@@ -159,6 +159,29 @@ function flattenItem(sum, item)	{
   return sum;
 }
 
+// ------------ GROCERY ITEM PRICES -------------
+function getPrices(arr) {
+	var result =[];
+
+	var temp ="";
+	var firstIndex =0;
+	var endIndex = 0;
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[i].length;j++){
+			if(arr[i][j]=='$'){
+				firstIndex = j;
+			}
+			if(arr[i][j]==')'){
+				endIndex = j;
+			}
+		}
+		temp = arr[i].substring(firstIndex+1,endIndex);
+		result.push(parseFloat(temp));
+	}
+
+	return result
+}
+
 //-------------------String to camelcase and combined------------------------------------
 let str = "The-stealth-warrior" //Output: TheStealthWarrior
 let capitalizedArr = []
