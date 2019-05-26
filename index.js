@@ -159,6 +159,30 @@ function flattenItem(sum, item)	{
   return sum;
 }
 
+// ************ IS THE WORD an ISOGRAM **********
+// An isogram is a word that has no repeating letters, consecutive or nonconsecutive.
+function isIsogram(str) {
+  s1 = str.toLowerCase();
+  return !s1.split('').reduce(function(dup, letter, index){
+    return dup || s1.indexOf(letter) !== index;
+  }, false);
+}
+// ALTERNATE ***
+function isIsogram(str) {
+  const letterCount = {};
+  str.toLowerCase().split('').forEach(ch => {
+    letterCount[ch] = (letterCount[ch] ? letterCount[ch] += 1 : 1);
+  });
+  for (var letter in letterCount) {
+    if (letterCount.hasOwnProperty(letter)) {
+      if (letterCount[letter] > 1) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 // ------------ GROCERY ITEM PRICES -------------
 function getPrices(arr) {
 	var result =[];
